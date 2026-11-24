@@ -198,7 +198,7 @@ The Vite base path is configurable through `VITE_BASE_PATH` to support different
 
 ## Project Status
 
-CampusTask is a functional client-side academic task management application. Its core assignment management features, responsive interface, and production build have been verified during development.
+CampusTask is ready for deployment as a static web application. Its production build has been verified, and the application can be hosted on platforms such as Vercel without requiring a backend service.
 
 ---
 
