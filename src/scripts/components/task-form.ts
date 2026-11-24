@@ -1,6 +1,7 @@
 import { Assignment, AssignmentStatus, Priority } from '../types/assignment';
 import { escapeHtml } from '../utils/html';
 import { showToast } from './notifications';
+import { isValidDate } from '../utils/date';
 
 export type AssignmentFormValues = Omit<Assignment, 'id' | 'createdAt'>;
 
@@ -219,8 +220,8 @@ export function openTaskForm(props: TaskFormProps): void {
     if (dueDate.length === 0) {
       setError('dueDate', 'Tanggal tenggat wajib diisi.');
       isValid = false;
-    } else if (!/^\d{4}-\d{2}-\d{2}$/.test(dueDate)) {
-      setError('dueDate', 'Format tanggal tidak valid.');
+    }else if (!isValidDate(dueDate)) {
+      setError('dueDate', 'Tanggal tidak valid. Periksa kembali tanggal, bulan, dan tahun.');
       isValid = false;
     }
 
