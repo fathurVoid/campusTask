@@ -1,0 +1,26 @@
+/* Component-level refinements that complement the utility classes. */
+
+.table-row-enter {
+  animation: fadeIn 0.25s ease-out both;
+}
+
+/* Make long table content wrap gracefully on narrow screens. */
+@media (max-width: 767px) {
+  .glass-card table {
+    min-width: 720px;
+  }
+}
+
+/* Focus ring consistency for keyboard users. */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Prevent modal body scroll bleed. */
+body.modal-open {
+  overflow: hidden;
+}
